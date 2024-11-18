@@ -2,13 +2,15 @@ const Benchtable = require('benchtable');
 
 const suite = new Benchtable();
 
-const kTesters = [{
-  name: 'sse4_crc32c_hw',
-  calculate: require('sse4_crc32').sse42_crc,
-}, {
-  name: 'sse4_crc32c_sw',
-  calculate: require('sse4_crc32').table_crc,
-}, {
+const kTesters = [
+//  {
+//   name: 'sse4_crc32c_hw',
+//   calculate: require('sse4_crc32').sse42_crc,
+// }, {
+//   name: 'sse4_crc32c_sw',
+//   calculate: require('sse4_crc32').table_crc,
+// },
+ {
   name: 'js_crc32c',
   calculate: require('../impls/js_crc32c').calculate,
 }, {
